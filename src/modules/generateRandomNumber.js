@@ -10,7 +10,10 @@ function generateRandomNumber() {
   let str = '';
 
   while (str.length !== 4) {
-    const randNum = Math.floor(Math.random() * 9 + 1);
+    const randNum =
+      str.length === 0
+        ? Math.floor(Math.random() * 9 + 1)
+        : Math.floor(Math.random() * 9 + 0);
 
     if (!str.includes(randNum.toString())) {
       str += randNum;

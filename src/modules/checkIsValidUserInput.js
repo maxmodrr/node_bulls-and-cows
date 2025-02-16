@@ -19,7 +19,7 @@ function checkIsValidUserInput(userInput) {
     if (checkUserInput[char]) {
       return false;
     }
-    checkUserInput[char] = char;
+    checkUserInput[char] = true;
   }
 
   return true;
